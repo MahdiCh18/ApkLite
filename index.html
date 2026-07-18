@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <title>ApkLite-تحميل العاب وتطبيقات اندرويد مجانا</title>
+        <meta name="description" content="ApkLite-موقع لتحميل العاب وتطبيقات الاندرويد بشكل مجاني ومباشر">
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+    <header class="header">
+     <div class="hcontainer">
+     <div class="icon">
+        ApkLite
+        <!-- <a href="#"><img src="images/logo.png" alt="Apk Lite Logo" /></a> -->
+      </div>
+      <div class="hnav">
+
+       <button class="hamburger" id="hamburger">
+        &#9776; <!-- هذا رمز برمي يعطي شكل الـ 3 خطوط -->
+    </button>
+
+     <nav id="nav-menu">
+        <ul class="navlist">
+         <li><a href="#">الصفحة الرئيسية</a></li>
+         <li><a href="#">التطبيقات</a></li>
+         <li><a href="#">الالعاب</a></li>
+         <li><a href="#">التواصل</a></li>
+        </ul>
+     </nav>
+      </div>
+     </div>
+    </header>
+    <main id="main-content">
+
+    <section id="hero-search-section">
+        <div class="sbar">
+        <h1>تحميل العاب وتطبيقات APK</h1>
+        <div class="sbox">
+        <input id="search" type="search" placeholder="بحت...">
+        <button id="sbutton" type="submit">بحت</button>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="new-games-section">
+        <div class="news">
+            <div class="section-head">
+                <h2>احدث الألعاب:</h2>
+                <button class="show-more-btn" type="button">عرض المزيد</button>
+            </div>
+
+            <div class="games-grid" id="games-grid">
+                <a href="#" class="game-card">
+                    <img src="images/game1-icon.jpg" alt="Subway Surfers" class="game-icon">
+                    <h3 class="game-title">Subway Surfers</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game2-icon.png" alt="Minecraft" class="game-icon">
+                    <h3 class="game-title">Minecraft</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game1-icon.jpg" alt="Hill Climb" class="game-icon">
+                    <h3 class="game-title">Hill Climb</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game2-icon.png" alt="PUBG Mobile" class="game-icon">
+                    <h3 class="game-title">PUBG Mobile</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game1-icon.jpg" alt="Free Fire" class="game-icon">
+                    <h3 class="game-title">Free Fire</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game2-icon.png" alt="Clash Royale" class="game-icon">
+                    <h3 class="game-title">Clash Royale</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="new-apps-section">
+    <div class="news">
+            <div class="section-head">
+                <h2>احدث التطبيقات:</h2>
+                <button class="show-more-btn" type="button">عرض المزيد</button>
+            </div>
+
+            <div class="games-grid" id="games-grid">
+                <a href="#" class="game-card">
+                    <img src="images/game1-icon.jpg" alt="Subway Surfers" class="game-icon">
+                    <h3 class="game-title">Subway Surfers</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game2-icon.png" alt="Minecraft" class="game-icon">
+                    <h3 class="game-title">Minecraft</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game1-icon.jpg" alt="Hill Climb" class="game-icon">
+                    <h3 class="game-title">Hill Climb</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game2-icon.png" alt="PUBG Mobile" class="game-icon">
+                    <h3 class="game-title">PUBG Mobile</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game1-icon.jpg" alt="Free Fire" class="game-icon">
+                    <h3 class="game-title">Free Fire</h3>
+                </a>
+
+                <a href="#" class="game-card">
+                    <img src="images/game2-icon.png" alt="Clash Royale" class="game-icon">
+                    <h3 class="game-title">Clash Royale</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+    </script>
+    </body>
+</html>

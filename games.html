@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <title>الألعاب - ApkLite</title>
+        <meta name="description" content="تصفح وتحميل أحدث ألعاب الأندرويد مقاناً مقسمة حسب الفئات">
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* تنسيق الأقسام والفئات تحت بعضها */
+            .page-title {
+                text-align: center;
+                margin: 30px 0;
+                font-size: 32px;
+                color: #333;
+            }
+
+            /* حاوية القسم بالكامل */
+            .category-section {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 20px auto;
+                max-width: 1200px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            }
+
+            /* رأس القسم: يحتوي على اسم الفئة وزر عرض المزيد */
+            .section-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #f0f0f0;
+                padding-bottom: 10px;
+            }
+
+            .section-header h2 {
+                font-size: 22px;
+                color: #2c3e50;
+                margin: 0;
+            }
+
+            .view-all-btn {
+                background-color: #2ecc71;
+                color: white;
+                text-decoration: none;
+                padding: 6px 15px;
+                border-radius: 20px;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+
+            .view-all-btn:hover {
+                background-color: #27ae60;
+            }
+
+            /* شبكة الألعاب الخاصة بكل فئة (تترتب أفقياً ومرنة) */
+            .category-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            /* تصميم كارت اللعبة الثابت */
+            .game-item-card {
+                background: #fdfdfd;
+                border: 1px solid #eaeaea;
+                border-radius: 12px;
+                padding: 12px;
+                width: 140px;
+                text-align: center;
+                text-decoration: none;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .game-item-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+            }
+
+            .game-item-icon {
+                width: 75px;
+                height: 75px;
+                border-radius: 16px;
+                object-fit: cover;
+                margin-bottom: 8px;
+            }
+
+            .game-item-title {
+                font-size: 14px;
+                color: #333;
+                margin: 5px 0 0 0;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; /* تضع نقط إذا كان الاسم طويلاً جداً لحماية التصميم */
+            }
+        </style>
+    </head>
+    <body>
+
+    <header class="header">
+     <div class="hcontainer">
+      <div class="icon">ApkLite</div>
+      <div class="hnav">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <nav id="nav-menu">
+            <ul class="navlist">
+             <li><a href="index.html">الصفحة الرئيسية</a></li>
+             <li><a href="#">التطبيقات</a></li>
+             <li><a href="games.html">الألعاب</a></li>
+             <li><a href="#">التواصل</a></li>
+            </ul>
+        </nav>
+      </div>
+     </div>
+    </header>
+
+    <main id="main-content">
+
+        <h1 class="page-title">قسم الألعاب</h1>
+
+        <!-- 1. فئة ألعاب الأكشن -->
+        <section class="category-section" id="action-games">
+            <div class="section-header">
+                <h2>ألعاب أكشن</h2>
+                <a href="#" class="view-all-btn">عرض المزيد</a>
+            </div>
+            <div class="category-grid">
+                <a href="#" class="game-item-card">
+                    <img src="images/game1-icon.jpg" alt="PUBG" class="game-item-icon">
+                    <h3 class="game-item-title">PUBG Mobile</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game1-icon.jpg" alt="Free Fire" class="game-item-icon">
+                    <h3 class="game-item-title">Free Fire</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game1-icon.jpg" alt="Call of Duty" class="game-item-icon">
+                    <h3 class="game-item-title">Call of Duty</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. فئة ألعاب الرياضة -->
+        <section class="category-section" id="sports-games">
+            <div class="section-header">
+                <h2>ألعاب رياضة</h2>
+                <a href="#" class="view-all-btn">عرض المزيد</a>
+            </div>
+            <div class="category-grid">
+                <a href="#" class="game-item-card">
+                    <img src="images/game1-icon.jpg" alt="Hill Climb" class="game-item-icon">
+                    <h3 class="game-item-title">Hill Climb Racing</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game1-icon.jpg" alt="FIFA" class="game-item-icon">
+                    <h3 class="game-item-title">FIFA Mobile</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game1-icon.jpg" alt="Score Hero" class="game-item-icon">
+                    <h3 class="game-item-title">Score! Hero</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. فئة ألعاب المغامرات -->
+        <section class="category-section" id="adventure-games">
+            <div class="section-header">
+                <h2>ألعاب مغامرات</h2>
+                <a href="#" class="view-all-btn">عرض المزيد</a>
+            </div>
+            <div class="category-grid">
+                <a href="#" class="game-item-card">
+                    <img src="images/game2-icon.png" alt="Minecraft" class="game-item-icon">
+                    <h3 class="game-item-title">Minecraft</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game2-icon.png" alt="Subway" class="game-item-icon">
+                    <h3 class="game-item-title">Subway Surfers</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game2-icon.png" alt="Sonic" class="game-item-icon">
+                    <h3 class="game-item-title">Sonic Dash</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. فئة ألعاب الاستراتيجية -->
+        <section class="category-section" id="strategy-games">
+            <div class="section-header">
+                <h2>ألعاب استراتيجية</h2>
+                <a href="#" class="view-all-btn">عرض المزيد</a>
+            </div>
+            <div class="category-grid">
+                <a href="#" class="game-item-card">
+                    <img src="images/game2-icon.png" alt="Clash Royale" class="game-item-icon">
+                    <h3 class="game-item-title">Clash Royale</h3>
+                </a>
+                <a href="#" class="game-item-card">
+                    <img src="images/game2-icon.png" alt="Clash of Clans" class="game-item-icon">
+                    <h3 class="game-item-title">Clash of Clans</h3>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    }
+    </script>
+    </body>
+</html>
