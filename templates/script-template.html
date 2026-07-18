@@ -1,53 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>تحميل {{APP_NAME}} ({{APP_VERSION}}) - {{APP_CATEGORY_ARABIC}}</title>
-    <meta name="description" content="{{APP_SHORT_DESCRIPTION}}">
-    <link rel="canonical" href="https://yourdomain.com/{{APP_PAGE_URL}}">
-    <!-- Schema.org SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "{{APP_NAME}}",
-      "operatingSystem": "Android {{APP_MIN_ANDROID}}",
-      "applicationCategory": "{{APP_CATEGORY}}",
-      "fileSize": "{{APP_SIZE}}",
-      "author": { "@type": "Organization", "name": "{{APP_DEVELOPER}}" },
-      "aggregateRating": { 
-          "@type": "AggregateRating", 
-          "ratingValue": "{{APP_RATING_VALUE}}", 
-          "ratingCount": "{{APP_RATING_COUNT}}" 
-      }
+    <head>
+        <meta charset="utf-8" />
+        <!-- المتغيرات الخاصة بالـ SEO والعناوين -->
+        <title>{{APP_NAME}} تحميل للاندرويد مجاناً APK - ApkLite</title>
+        <meta name="description" content="تحميل تطبيق {{APP_NAME}} أحدث إصدار للأندرويد مجاناً. {{APP_SHORT_DESCRIPTION}}">
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- ========================================== -->
+        <!--  سكايما التطبيقات (SoftwareApplication Schema) -->
+        <!-- ========================================== -->
+        <script type="application/ld-json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "{{APP_NAME}}",
+          "operatingSystem": "Android",
+          "applicationCategory": "{{APP_CATEGORY}}",
+          "image": "{{APP_ICON_URL}}",
+          "url": "{{APP_PAGE_URL}}",
+          "publisher": {
+            "@type": "Organization",
+            "name": "{{APP_DEVELOPER}}"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "review": {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "ApkLite Editor"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "{{APP_RATING_VALUE}}",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{APP_RATING_VALUE}}",
+            "ratingCount": "{{APP_RATING_COUNT}}"
+          },
+          "fileSize": "{{APP_SIZE}}",
+          "softwareVersion": "{{APP_VERSION}}"
+        }
+        </script>
+        <!-- ========================================== -->
+
+        <style>
+            /* تنسيق صندوق عرض التطبيق الرئيسي */
+            .app-detail-container {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 25px;
+                margin: 30px auto;
+                max-width: 800px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            @media (max-width: 600px) {
+                .app-detail-container {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+
+            .main-app-icon {
+                width: 120px;
+                height: 120px;
+                border-radius: 24px;
+                object-fit: cover;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            }
+
+            .app-meta-info {
+                flex: 1;
+            }
+
+            .app-main-title {
+                font-size: 28px;
+                color: #2c3e50;
+                margin: 0 0 10px 0;
+            }
+
+            .developer-text {
+                color: #7f8c8d;
+                font-size: 14px;
+                margin: 0 0 15px 0;
+            }
+
+            /* جدول بيانات التطبيق */
+            .info-table {
+                width: 100%;
+                margin: 20px 0;
+                border-collapse: collapse;
+            }
+
+            .info-table td {
+                padding: 10px;
+                border-bottom: 1px solid #f0f0f0;
+                font-size: 15px;
+            }
+
+            .info-table td.label {
+                font-weight: bold;
+                color: #555;
+                width: 30%;
+            }
+
+            /* زر التحميل الاحترافي */
+            .download-section {
+                text-align: center;
+                margin: 30px 0;
+            }
+
+            .download-btn {
+                background-color: #2ecc71;
+                color: white;
+                text-decoration: none;
+                padding: 15px 40px;
+                border-radius: 30px;
+                font-size: 18px;
+                font-weight: bold;
+                transition: 0.3s;
+                display: inline-block;
+                box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            }
+
+            .download-btn:hover {
+                background-color: #27ae60;
+                transform: translateY(-2px);
+            }
+
+            /* حاوية الوصف النصي للمقالة */
+            .content-section {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 25px;
+                margin: 20px auto;
+                max-width: 800px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+                line-height: 1.8;
+                color: #444;
+            }
+        </style>
+    </head>
+    <body>
+
+    <header class="header">
+     <div class="hcontainer">
+      <div class="icon">ApkLite</div>
+      <div class="hnav">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <nav id="nav-menu">
+            <ul class="navlist">
+             <li><a href="index.html">الصفحة الرئيسية</a></li>
+             <li><a href="apps.html">التطبيقات</a></li>
+             <li><a href="games.html">الألعاب</a></li>
+             <li><a href="#">التواصل</a></li>
+            </ul>
+        </nav>
+      </div>
+     </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- الصندوق الرئيسي للتطبيق -->
+        <div class="app-detail-container">
+            <img src="{{APP_ICON_URL}}" alt="أيقونة {{APP_NAME}}" class="main-app-icon">
+            <div class="app-meta-info">
+                <h1 class="app-main-title">{{APP_NAME}}</h1>
+                <p class="developer-text">المطور: {{APP_DEVELOPER}}</p>
+                
+                <!-- جدول معلومات تقنية للتطبيق تهم المستخدم ومحركات البحث -->
+                <table class="info-table">
+                    <tr>
+                        <td class="label">الإصدار الحالي</td>
+                        <td>{{APP_VERSION}}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">الحجم</td>
+                        <td>{{APP_SIZE}}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">نظام التشغيل</td>
+                        <td>Android {{APP_MIN_ANDROID}} أو أحدث</td>
+                    </tr>
+                    <tr>
+                        <td class="label">الفئة</td>
+                        <td>{{APP_CATEGORY_ARABIC}}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">التقييم</td>
+                        <td>⭐ {{APP_RATING_VALUE}} (بناءً على {{APP_RATING_COUNT}} تصويت)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- زر التحميل -->
+        <div class="download-section">
+            <a href="{{APP_DOWNLOAD_URL}}" class="download-btn">تحميل {{APP_NAME}} APK مجاناً</a>
+        </div>
+
+        <!-- قسم مقال مراجعة ووصف التطبيق -->
+        <section class="content-section">
+            <h2>حول تطبيق {{APP_NAME}} للأندرويد</h2>
+            <div class="app-long-description">
+                {{APP_LONG_DESCRIPTION}}
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     }
     </script>
-</head>
-<body>
-    <article class="app-container">
-        <header>
-            <img src="../{{APP_ICON_URL}}" alt="{{APP_NAME}} icon" width="120" height="120" loading="eager">
-            <h1>{{APP_NAME}}</h1>
-            <span class="badge">{{APP_CATEGORY_ARABIC}}</span>
-        </header>
-        <section class="meta-info">
-            <ul>
-                <li><strong>المطور:</strong> {{APP_DEVELOPER}}</li>
-                <li><strong>الإصدار:</strong> {{APP_VERSION}}</li>
-                <li><strong>الحجم:</strong> {{APP_SIZE}}</li>
-                <li><strong>متطلبات التشغيل:</strong> أندرويد {{APP_MIN_ANDROID}}</li>
-                <li><strong>التقييم:</strong> ⭐ {{APP_RATING_VALUE}} ({{APP_RATING_COUNT}} مقيم)</li>
-            </ul>
-        </section>
-        <hr>
-        <section class="download-section">
-            <a href="{{APP_DOWNLOAD_URL}}" class="btn-download" rel="nofollow">تحميل مباشر (APK)</a>
-        </section>
-        <hr>
-        <section class="description">
-            <h2>حول {{APP_NAME}}</h2>
-            <div>{{APP_LONG_DESCRIPTION}}</div>
-        </section>
-    </article>
-</body>
+    </body>
 </html>
